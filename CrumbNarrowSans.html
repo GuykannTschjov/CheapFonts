@@ -9,21 +9,42 @@
   <p>和遍黑体（截至2023/02/01）一样，可以显示CJK扩展C~H区所有汉字、B区部分汉字、扩展注音符号、日语变体假名、甚至还有契丹小字。<s>屑中之屑的是，UE000还放了个“纟火”。</s></p>
   
   <h3>预览</h3>
-  <p>亮点：𫙉𰃙𱙂</p>
-  <img src="pics/CrumbNarrowSans.png">
+  <figure style="text-align: center">
+    <img src="pics/CrumbNarrowSans.png" style="width:100%">
+    <figcaption>亮点：𫙉𰃙𱙂、𱘩𫌎𭑵、𠷡㚺𰌗</figcaption>
+  </figure>
+
+  <h3>版本</h3>
+  
+  <p>有两个版本：</p>
+  
+  <ol>
+  <li>一个缝了一点<a href="https://www.hannom-rcv.org/font.html#e">明喃黑体</a>的版本。明喃黑体来自不可商用的方正兰亭黑（a.k.a 微软雅黑），因此整个字体都不可商用。</li>
+  <li>一个没缝明喃黑体的版本。无法显示常见喃字（罕见的倒是能显示）。与遍黑体与得意黑一样，也使用SIL Open Font License 1.1发布。</li>
+  </ol>
+
+  <p>不像<a href="PlanGlowThic.html">遍荧黑体</a>，只有.ttf格式。</p>
   
   <h3>问题</h3>
   
   <ul>
   <li>由于字体的65536字形限制，无法显示谚文音节。我完全可以再弄一个P2专门装谚文音节，但手机一次只能用一个字体文件，所以就没做。</li>
+  <li>由于同一原因，缝明兰喃黑的版本也没法把明兰喃黑的喃字全装进去。</li>
   <li>遍黑体的撇捺机械加粗后有时会有很尖的突出。</li>
   <li>部分解决了<a href="PlanGlowThic.html">遍荧黑体</a>中提到的问题，搞到FC的新版破解版后用“自动纠正轮廓方向”解决了。机械压缩后用FontCreator的加粗功能横向加粗了。可是遍黑体有些拆笔画的字无法自动纠正轮廓方向，加粗后还是有问题：</li>
   </ul>
-  <img src="pics/CrumbNarrowSans_issue.png">
+  <figure style="text-align: center">
+    <img src="pics/CrumbNarrowSans_issue.png" style="width:10em">
+    <figcaption>图1：“重”部件笔画轮廓方向出错。</figcaption>
+  </figure>
+  <figure style="text-align: center">
+    <img src="pics/CrumbNarrowSans_issue2.png" style="width:10em">
+    <figcaption>图2：“衣”和“幼”部件折笔末端出现突出。</figcaption>
+  </figure>
 
   <h3>备考</h3>
   
-  <p>我做这个字体的时候，<a href="https://github.com/onichan0923/smiley-moon">斜月体</a>还没发布。<s>早知道就魔改这个不自己缝了。</s>不，这个也有机械加粗遍黑体的问题，而且拉宽了再压窄会有双倍的机会出错。</p>
+  <p>我做这个字体的时候，<a href="https://github.com/onichan0923/smiley-moon" style="width:100%">斜月体</a>还没发布。<s>早知道就魔改这个不自己缝了。</s>不，这个也有机械加粗遍黑体的问题，而且拉宽了再压窄会有双倍的机会出错。</p>
   
    
 
