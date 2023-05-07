@@ -10,10 +10,10 @@
           font-family: "XSJ original";
           src: url(https://guikanntschjov.github.io/CheapFonts/XSJ%20original.ttf)
         }
-        div {border: black 1px solid;}
-      </style>
+        div {border: black 1px solid;font-size:300%;font-family:'XSJ original'}
+    </style>
 
-  <div style="font-size:300%;font-family:'XSJ original'" id="textInput" contenteditable="true">
+  <div contenteditable="true">
     JSX<br/>
     abcdefghijklmnopqr<br/>
     <br/>
@@ -22,7 +22,7 @@
     
   </div>
 
-  <div style="font-size:300%;font-family:'XSJ original'" id="textInput" contenteditable="true"></div>
+  <div id="textInput" contenteditable="true"></div>
   <button onclick="generateChinese()">生成天书</button>
   <script>
     function generateChinese() {
@@ -37,24 +37,24 @@
     }
   </script>
 
-  <div style="font-size:300%;font-family:'XSJ original'" id="textInput2" contenteditable="true"></div>
+  <div id="textInput2" contenteditable="true"></div>
   <button onclick="generateJapanese()">生成全所为</button>
   <script>
     function generateJapanese() {
           const textInput = document.getElementById("textInput2");
           let japaneseStr = "";
-          const c = 0.9; 
+          var c = 0.9; 
           for (let i = 0; i < 100; i++) {
             const r = Math.random() * c;
-              if (r < 0.7) {
+            if (r < 0.7) {
               // 生成伪假名
               japaneseStr += String.fromCharCode(Math.floor(Math.random() * (61922 - 61696 + 1) + 61696));
               c = 1;
-              } else if (r <= 0.9) {
+            } else if (r <= 0.9) {
               // 生成伪汉字
               japaneseStr += String.fromCharCode(Math.floor(Math.random() * (62125 - 61952 + 1) + 61952));
               c = 1;
-              } else {
+            } else {
               // 生成标点
               japaneseStr += String.fromCharCode(Math.floor(Math.random() * 2 + 61950));
               c = 0.9;
@@ -65,30 +65,30 @@
         //code by ChatGPT at https://chat23.yqcloud.top/
       </script>
 
-<div style="font-size:300%;font-family:'XSJ original'" id="textInput3" contenteditable="true"></div>
+<div id="textInput3" contenteditable="true"></div>
 <button onclick="generateJapanese2()">生成未辨明伪日文</button>
 <script>
   function generateJapanese2() {
         const textInput = document.getElementById("textInput3");
         let japaneseStr = "";
-        const c = 0.9; 
+        var c = 0.9; 
         for (let i = 0; i < 15; i++) {
           const r = Math.random() * c;
-            if (r < 0.7) {
+          if (r < 0.7) {
             // 生成伪假名
             japaneseStr += String.fromCharCode(Math.floor(Math.random() * 33 + 61504));
             const rr = Math.random()
-            if (r <= 0.1) {
+            if (rr <= 0.1) {
               japaneseStr += ''
-            } else if (r <= 0.15) {
+            } else if (rr <= 0.15) {
               japaneseStr += ''
             }
             c = 1;
-            } else if (r <= 0.9) {
+          } else if (r <= 0.9) {
             // 生成伪汉字
             japaneseStr += String.fromCharCode(Math.floor(Math.random() * 14 + 61536));
             c = 1;
-            } else {
+          } else {
             // 生成标点
             japaneseStr += String.fromCharCode(Math.floor(Math.random() * 2 + 61498));
             c = 0.9;
