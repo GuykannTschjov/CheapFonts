@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>生成随机天书</title>
+</head>
+<body>
+    <style>
+        @font-face {
+          font-family: "XSJ original";
+          src: url(https://guikanntschjov.github.io/CheapFonts/XSJ%20original.ttf)
+        }
+      </style>
+  <script>
+    function generateChinese() {
+      const textInput = document.getElementById("textInput");
+      let chineseStr = "";
+
+      for (let i = 0; i < 100; i++) {
+        chineseStr += String.fromCharCode(Math.floor(Math.random() * (57959 - 57344 + 1) + 57344));
+      }
+
+      textInput.innerText = chineseStr;
+    }
+
+function generateJapanese() {
+      const textInput = document.getElementById("textInput2");
+      let japaneseStr = "";
+      for (let i = 0; i < 100; i++) {
+        const r = Math.random();
+          if (r < 0.7) {
+          // 生成伪假名
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * (61922 - 61696 + 1) + 61696));
+          } else if (r < 0.9) {
+          // 生成伪汉字
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * (62125 - 61952 + 1) + 61952));
+          } else {
+          // 生成标点
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * 2 + 61950));
+        }
+      }
+      textInput.innerText = japaneseStr;
+    }
+    //code by ChatGPT at https://chat23.yqcloud.top/
+  </script>
+
+  <div style="font-size:300%;font-family:'XSJ original'" id="textInput" contenteditable="true"></div>
+  <button onclick="generateChinese()">生成天书</button>
+  <div style="font-size:300%;font-family:'XSJ original'" id="textInput2" contenteditable="true"></div>
+  <button onclick="generateJapanese()">生成全所为</button>
+</body>
+</html>
