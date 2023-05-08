@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>生成随机天书</title>
 </head>
-<body>
+<body onload="generateChinese();generateJapanese();generateJapanese2()">
     <style>
         @font-face {
           font-family: "XSJ original";
@@ -13,6 +13,10 @@
         div {border: black 1px solid;font-size:300%;font-family:'XSJ original'}
     </style>
 
+<h2>空白草稿文本框</h2>
+  <input type="text" style="border: black 1px solid;font-size:300%;font-family:'XSJ original';min-height:400px;width:90%;">
+
+<h2>复制用</h2>
   <div contenteditable="true">
     JSX<br/>
     abcdefghijklmnopqr<br/>
@@ -22,7 +26,8 @@
     
   </div>
 
-  <div id="textInput" contenteditable="true"></div>
+<h2>徐冰天书</h2>
+  <div id="textInput" contenteditable="plaintext-only"></div>
   <button onclick="generateChinese()">生成天书</button>
   <script>
     function generateChinese() {
@@ -37,7 +42,8 @@
     }
   </script>
 
-  <div id="textInput2" contenteditable="true"></div>
+<h2>全所为拆字</h2>
+  <div id="textInput2" contenteditable="plaintext-only"></div>
   <button onclick="generateJapanese()">生成全所为</button>
   <script>
     function generateJapanese() {
@@ -65,7 +71,8 @@
         //code by ChatGPT at https://chat23.yqcloud.top/
       </script>
 
-<div id="textInput3" contenteditable="true"></div>
+<h2>Q群存的</h2>
+<div id="textInput3" contenteditable="plaintext-only"></div>
 <button onclick="generateJapanese2()">生成未辨明伪日文</button>
 <script>
   function generateJapanese2() {
@@ -97,6 +104,8 @@
         textInput.innerText = japaneseStr;
       }
       //code by ChatGPT at https://chat23.yqcloud.top/
+
+      
     </script>
 </body>
 </html>
