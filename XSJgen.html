@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>生成随机天书</title>
 </head>
-<body onload="generateChinese();generateJapanese();generateJapanese2()">
+<body onload="generate1();generate2();generate3();generate4();generate5()">
     <style>
         @font-face {
           font-family: "XSJ original";
@@ -28,9 +28,9 @@
 
 <h2>徐冰天书</h2>
   <div id="textInput" contenteditable="plaintext-only"></div>
-  <button onclick="generateChinese()">生成天书</button>
+  <button onclick="generate1()">生成天书</button>
   <script>
-    function generateChinese() {
+    function generate1() {
       const textInput = document.getElementById("textInput");
       let chineseStr = "";
 
@@ -44,9 +44,9 @@
 
 <h2>全所为拆字</h2>
   <div id="textInput2" contenteditable="plaintext-only"></div>
-  <button onclick="generateJapanese()">生成全所为</button>
+  <button onclick="generate2()">生成全所为</button>
   <script>
-    function generateJapanese() {
+    function generate2() {
           const textInput = document.getElementById("textInput2");
           let japaneseStr = "";
           var c = 0.9; 
@@ -73,9 +73,9 @@
 
 <h2>Q群存的</h2>
 <div id="textInput3" contenteditable="plaintext-only"></div>
-<button onclick="generateJapanese2()">生成未辨明伪日文</button>
+<button onclick="generate3()">生成未辨明伪日文</button>
 <script>
-  function generateJapanese2() {
+  function generate3() {
         const textInput = document.getElementById("textInput3");
         let japaneseStr = "";
         var c = 0.9; 
@@ -104,8 +104,49 @@
         textInput.innerText = japaneseStr;
       }
       //code by ChatGPT at https://chat23.yqcloud.top/
-
-      
     </script>
+
+<h2>《全职猎人》中费坦·托波奥的母语</h2>
+<div id="textInput4" contenteditable="plaintext-only"></div>
+<button onclick="generate4()">生成动画楷体版</button>
+<button onclick="generate5()">生成漫画硬笔手写版</button>
+<script>
+function generate4() {
+      const textInput = document.getElementById("textInput4");
+      let japaneseStr = "";
+      var c = 0.9; 
+      for (let i = 0; i < 20; i++) {
+        const r = Math.random() * c;
+        if (r < 0.93) {
+          // 生成
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * (62238 - 62208 + 1) + 62208));
+          c = 1;
+        } else {
+          // 生成标点
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * 4 + 62252));
+          c = 0.9;
+        }
+      }
+      textInput.innerText = japaneseStr;
+    }
+function generate5() {
+      const textInput = document.getElementById("textInput4");
+      let japaneseStr = "";
+      var c = 0.9; 
+      for (let i = 0; i < 20; i++) {
+        const r = Math.random() * c;
+        if (r < 0.93) {
+          // 生成
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * (62286 - 62256 + 1) + 62256));
+          c = 1;
+        } else {
+          // 生成标点
+          japaneseStr += String.fromCharCode(Math.floor(Math.random() * 4 + 62300));
+          c = 0.9;
+        }
+      }
+      textInput.innerText = japaneseStr;
+    }
+  </script>  
 </body>
 </html>
