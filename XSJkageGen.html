@@ -18,9 +18,9 @@
 
     <button onclick='intoDiv(getCharMixed(50, 0.2,"","","",""))'>析世鉴（允许真文字）</button>
 
-    <button onclick='intoDiv(getCharMixed(10, 0.3, "","","",""))'>全所为</button>
+    <button onclick='intoDiv(getCharMixed(20, 0.4, "","","",""))'>全所为</button>
 
-    <button onclick='intoDiv(getCharPunct(15, "","getCharMixed(1, 0.3, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>全所为（带标点）</button>
+    <button onclick='intoDiv(getCharPunct(30, "","getCharMixed(1, 0.4, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>全所为（带标点）</button>
 
     <button onclick='intoDiv(getCharMany(15,"",""))'>全职猎人</button>
 
@@ -34,13 +34,15 @@
 
 <button onclick='intoDiv(getCharPunct(150, "","getChar(&#39;&#39;,&#39;&#39;)"))'>AI汉字（带真标点）</button>
 
-    <button onclick='intoDiv(getCharPunct(15, "","getCharMixed(1, 0.3, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>AI汉字假名（带标点）</button>
+    <button onclick='intoDiv(getCharPunct(150, "","getCharMixed(1, 0.3, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>AI汉字假名（带标点）</button>
 
     <button onclick='intoDiv(getGlyphWikiKana(70))'>Glyphwiki真假名</button>
     
     <button onclick='intoDiv(getLatin(200))'>KK&MUFI真拉丁字母</button>
+
+    <button onclick='intoDiv(getLatinAlt(100))'>Symbola真拉丁字母</button>
     
-    <button onclick='intoDiv(getCharPunct(50, "","getWord()"))'>究极缝合怪</button>
+    <button onclick='intoDiv(getCharPunct(50, "","getWord()"))'>究极缝合怪</button>
 
 <script>
     function intoDiv(str) {
@@ -206,6 +208,35 @@
         return result;
     }
 
+function getLatinAlt(count) {
+        let result = "";
+        var c = 0.9; 
+        result += getChar("","")
+        while (result.length < count) {
+            for (let i = 0; i < Math.random()*12; i++) {
+               result += getChar("","")
+            }
+            const rr = Math.random()
+            if (rr < 0.6) {
+                result += " "
+            } else if (rr < 0.9) {
+                punct = ""
+                result += getFromString(punct);
+                result += " "
+            } else {
+                punct = ""
+                result += getFromString(punct);
+                result += " "
+                result += getChar("","")
+            }
+        }
+        result += getChar("","")
+        punct = ""
+        result += getFromString(punct);
+        return result;
+    }
+
+
     function getKatakanaMix(count) {
         let result = "";
         var cc = 0.8; 
@@ -288,6 +319,12 @@
   <h2>复制用</h2>
     <div contenteditable="true">
 JSX<br>
+<br>
+<br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+
     </div>
