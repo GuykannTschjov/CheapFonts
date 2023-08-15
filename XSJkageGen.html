@@ -18,9 +18,9 @@
 
     <button onclick='intoDiv(getCharMixed(50, 0.2,"","","",""))'>析世鉴（允许真文字）</button>
 
-    <button onclick='intoDiv(getCharMixed(10, 0.3, "","","",""))'>全所为</button>
+    <button onclick='intoDiv(getCharMixed(10, 0.3, "","","",""))'>全所为</button>
 
-    <button onclick='intoDiv(getCharPunct(15, "","getCharMixed(1, 0.3, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>全所为（带标点）</button>
+    <button onclick='intoDiv(getCharPunct(15, "","getCharMixed(1, 0.3, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>全所为（带标点）</button>
 
     <button onclick='intoDiv(getCharMany(15,"",""))'>全职猎人</button>
 
@@ -31,6 +31,10 @@
     <button onclick='intoDiv(getCharPunct(150, "","getChar(&#39;&#39;,&#39;&#39;)"))'>遍黑体真汉字（带真标点）</button>
 
     <button onclick='intoDiv(getCharPunct(150, "","getChar(&#39;&#39;,&#39;&#39;)"))'>遍黑体真汉字（带伪标点）</button>
+
+<button onclick='intoDiv(getCharPunct(150, "","getChar(&#39;&#39;,&#39;&#39;)"))'>AI汉字（带真标点）</button>
+
+    <button onclick='intoDiv(getCharPunct(15, "","getCharMixed(1, 0.3, &#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)"))'>AI汉字假名（带标点）</button>
 
     <button onclick='intoDiv(getGlyphWikiKana(70))'>Glyphwiki真假名</button>
     
@@ -211,7 +215,7 @@
             result += getCharDakuten("","","")
             cc = 1; 
             } else if (rr < 0.7) {
-                result += getFromString("");
+                result += getFromString("");
                 cc = 1; 
             } else {
                 if (Math.random() < 0.5) {
@@ -234,7 +238,7 @@
                     result += getCharDakuten("","","")
                     cc = 1; 
                 } else if (rr < 0.8) {
-                    result += getFromString("");
+                    result += getFromString("");
                     cc = 1; 
                 } else {
                     result += getChar("","")
